@@ -1,10 +1,5 @@
-from src.masks import mask_account_number, mask_card_number, convert_date
+from src.widget import convert_date, number_or_account
 
-user_input = input("Карта/счет?   ")
-
-if "Счет" in user_input:
-    print(f"Счет {mask_account_number(user_input)}")
-else:
-    print(f"{mask_card_number(user_input)}")
+number_or_account(input())
 
 print(convert_date(input("время?   ")))
