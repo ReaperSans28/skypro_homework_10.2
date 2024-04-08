@@ -1,7 +1,7 @@
 from src.masks import mask_account_number, mask_card_number
 
 
-def convert_date(input_date):
+def convert_date(input_date: str) -> str:
     """
     Функция выдает нам дату.
     """
@@ -9,7 +9,7 @@ def convert_date(input_date):
     return f"{date_parts[2]}.{date_parts[1]}.{date_parts[0]}"
 
 
-def number_or_account(user_input):
+def number_or_account(user_input: str) -> None:
     """
     Функция определяет работаем мы с счетом или картой.
     """
