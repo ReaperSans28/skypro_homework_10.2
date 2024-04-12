@@ -2,9 +2,7 @@ def mask_card_number(user_card_number: str) -> str:
     """
     Функция принимает номер банковской карты и возвращает ее маску.
     """
-    user_card = user_card_number.split()
-    number = user_card[1]
-    masked_number = user_card[0] + " " + number[:4] + " " + number[4:6] + "** **** " + number[12:]
+    masked_number = user_card_number[:4] + " " + user_card_number[4:6] + "** **** " + user_card_number[12:]
     return masked_number
 
 

@@ -9,11 +9,14 @@ def convert_date(input_date: str) -> str:
     return f"{date_parts[2]}.{date_parts[1]}.{date_parts[0]}"
 
 
-def number_or_account(user_input: str) -> None:
+def number_or_account(user_input: str) -> str:
     """
     Функция определяет работаем мы с счетом или картой.
     """
     if "Счет" in user_input:
-        print(f"Счет {mask_account_number(user_input)}")
+        return f"Счет {mask_account_number(user_input)}"
     else:
-        print(f"{mask_card_number(user_input)}")
+        user_card = user_input.split()
+        card_name = user_card[:-1]
+        card_number = user_card[-1]
+        return " ".join(card_name) + " " + mask_card_number(card_number)
