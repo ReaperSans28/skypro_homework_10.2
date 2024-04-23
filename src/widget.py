@@ -1,7 +1,7 @@
 from src.masks import mask_account_number, mask_card_number
 
 
-def convert_date(input_date: str) -> str:
+def convert_date_(input_date: str) -> str:
     """
     Функция выдает нам дату.
     """
